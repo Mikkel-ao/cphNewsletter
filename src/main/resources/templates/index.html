@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<title>Newsletters</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="../public/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+
+<header>
+    <img src="../images/figma_title2.png">
+</header>
+
+<body>
+<p>Nyheder, der betyder noget - Tilmeld dig vores nyhedsbrev her</p>
+
+<form method="post">
+    <label for="email"></label>
+    <input type="email" name="email" id="email" placeholder="Email" required />
+    <button type="submit" name="Lær mere" th:formaction="@{/cphNewsletters/subscribe}">
+        Lær mere
+    </button>
+</form>
+<div class="subscriber-message" th:if="${message}">
+    <p th:text="${message}"></p>
+</div>
+
+<br>
+<div class="newsletter-container">
+    <button id="newestEditionBtn" class="btn newest-edition-btn">Nyeste Udgave</button>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- Filter Buttons, Year selection -->
+<div id="filterButtons">
+    <button class="btn active" onclick="filterSelection('all', event)"> Vis Alle</button>
+    <button class="btn" onclick="filterSelection('2024', event)"> 2024</button>
+    <button class="btn" onclick="filterSelection('2025', event)"> 2025</button>
+</div>
+
+<!-- Newsletter List -->
+<div class="newsletter-container">
+    <div class="newsletter-box 2025" data-pdf="/pdf/06_Nyhedsbrev_FebMar_2025.pdf" onclick="window.open('/pdf/06_Nyhedsbrev_FebMar_2025.pdf', '_blank');">Februar/Marts 2025</div>
+    <div class="newsletter-box 2025" data-pdf="/pdf/05_Nyhedsbrev_JanFeb_2025.pdf" onclick="window.open('/pdf/05_Nyhedsbrev_JanFeb_2025.pdf', '_blank');">Januar/Februar 2025</div>
+    <div class="newsletter-box 2025" data-pdf="/pdf/04_Nyhedsbrev_DecJan_2025.pdf" onclick="window.open('/pdf/04_Nyhedsbrev_DecJan_2025.pdf', '_blank');">December/Januar 2025</div>
+    <div class="newsletter-box 2024" data-pdf="/pdf/03_Nyhedsbrev_NovDec_2024.pdf" onclick="window.open('/pdf/03_Nyhedsbrev_NovDec_2024.pdf', '_blank');">November/December 2024</div>
+    <div class="newsletter-box 2024" data-pdf="/pdf/02_Nyhedsbrev_OktNov_2024.pdf" onclick="window.open('/pdf/02_Nyhedsbrev_OktNov_2024.pdf', '_blank');">Oktober/November 2024</div>
+    <div class="newsletter-box 2024" data-pdf="/pdf/01_Nyhedsbrev_SepOkt_2024.pdf" onclick="window.open('/pdf/01_Nyhedsbrev_SepOkt_2024.pdf', '_blank');">September/Oktober 2024</div>
+</div>
+
+
+<div class="footer">
+    <img src="../images/cphbusiness-logo-generel-blaa.png" />
+    <div class="footer-buttons">
+        <a href="../cphNewsletters/addNewsletter" th:href="@{/cphNewsletters/addNewsletter}" class="btn">Tilføj Nyhedsbrev</a>
+    </div>
+</div>
+
+<!-- Determines newsletters shown by each selected search -->
+<script src="../js/index.js"></script>
+
+</body>
+
+</html>

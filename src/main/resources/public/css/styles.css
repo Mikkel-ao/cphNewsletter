@@ -1,0 +1,240 @@
+/* Stylesheet for the application */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #ffffff;
+}
+
+/* Header section */
+header {
+    color: white;
+    padding: 40px 20px;
+    text-align: center; /* Trying to center image */
+    padding: 20px;
+}
+
+header img {
+    width: 850px;
+    height: auto;
+}
+
+.left-aligned-h1 {
+    text-align: left;
+    margin-left: 0;
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #002E6D;
+    color: white;
+    padding: 10px;
+}
+
+.footer img {
+    width: 120px !important; /* Force size */
+    height: auto;
+    max-width: 100%;
+    margin-right: 30px;
+}
+
+
+/* Ensure the 'Add Newsletter' link looks like a button */
+.footer-buttons a.btn {
+    background-color: #FBB040; /* Same as other buttons */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Removes underline */
+    display: inline-block;
+}
+
+/* Hover effect */
+.footer-buttons a.btn:hover {
+    background-color: #002E6D;
+}
+
+#filterButtons {
+    margin: 20px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Add a light grey background on hover */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Active button styling */
+.btn.active {
+    background-color: #002E6D;
+    color: white;
+}
+
+/* Newsletter clickable boxes */
+.newsletter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.newsletter-box {
+    background-color: #FBB040;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-box:hover {
+    background-color: #002E6D;
+}
+
+/* New class for the "Nyeste Udgave" button */
+.newest-edition-btn {
+    background-color: #FBB040;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.newest-edition-btn:hover {
+    background-color: #002E6D;
+}
+
+/* Logo styling */
+.logo {
+    width: 300px; /* Adjust width to make the logo smaller */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: 0; /* Place it all the way to the left */
+    top: 20px; /* Adjust top margin if necessary */
+}
+
+
+.add-newsletter-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.add-newsletter-form input, textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.add-newsletter-form button {
+
+}
+
+.subscriber-message {
+    width: 10rem; /* Decrease width to make it smaller */
+    padding: 0.5rem; /* Reduce padding to make it more compact */
+    margin-top: 1rem;
+    border: 1px solid #00408d; /* Corrected the border syntax */
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto; /* This ensures it's centered horizontally */
+    text-align: center; /* Center the text inside the box */
+}
+
+
+.button {
+    display: inline-block;
+    background-color: #FBB040; /* Orange */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #E89A36; /* Darker orange */
+    transform: translateY(-2px);
+}
+
+/* Click effect */
+.button:active {
+    background-color: #00408d;
+    transform: translateY(1px);
+}
+
+/* Disabled state */
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.newsletter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.newsletter {
+    width: 100%;
+    max-width: 280px;
+    border:1px solid silver;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+}
+
+.teaser {
+    padding: 10px;
+    background-color: #FBB040;
+    color: black;
+    height: 100%;
+}
+
+.newsletter-title {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
